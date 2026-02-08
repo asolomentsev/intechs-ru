@@ -28,10 +28,6 @@ export default defineConfig({
     checkOrigin: true,
   },
 
-  experimental: {
-    contentIntellisense: true,
-  },
-
   markdown: {
     shikiConfig: {
       theme: 'github-dark',
