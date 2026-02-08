@@ -26,7 +26,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (!result.success) {
       const fieldErrors: Record<string, string[]> = {};
-      for (const error of result.error.errors) {
+      for (const error of result.error.issues) {
         const field = error.path[0] as string;
         if (!fieldErrors[field]) {
           fieldErrors[field] = [];

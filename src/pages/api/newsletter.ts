@@ -27,7 +27,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(
         JSON.stringify({
           success: false,
-          error: result.error.errors[0]?.message || 'Please enter a valid email address',
+          error: result.error.issues[0]?.message || 'Please enter a valid email address',
         }),
         {
           status: 400,
